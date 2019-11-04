@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    tools:context=".modules.home.main.view.HomeActivity">
+
+    <!-- TAB/Botoes Superiores-->
+    <LinearLayout
+        android:id="@+id/tabBtnsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--Left-->
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:background="@drawable/background_tab_button_left"
+            android:padding="4dp"
+            android:src="@drawable/ic_search"
+            tools:ignore="ButtonStyle"
+            android:contentDescription="@string/app_name" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="35dp"
+            android:background="#fff"/>
+
+        <!--Right-->
+        <ImageButton
+            android:id="@+id/btnFavorites"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:background="@drawable/background_tab_button_right"
+            android:src="@drawable/ic_star_big"
+            android:padding="4dp"
+            tools:ignore="ButtonStyle"
+            android:contentDescription="@string/app_name" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentPager"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabBtnsLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

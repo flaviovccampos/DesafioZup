@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="0dp">
+
+    <ImageView
+        android:id="@+id/folderImage"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        tools:src="@drawable/movie_folder_example"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bkgGradient"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_margin="0dp"
+        android:contentDescription="@string/app_name"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/background_info_movie_gradient" />
+
+
+    <TextView
+        android:id="@+id/title_favorite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:textSize="10sp"
+        android:paddingEnd="@dimen/margin_8dp"
+        android:visibility="gone"
+        android:textColor="@color/yellow_favorited"
+        app:layout_constraintStart_toStartOf="@+id/bkgGradient"
+        app:layout_constraintEnd_toEndOf="@id/bkgGradient"
+        app:layout_constraintTop_toTopOf="@+id/bkgGradient"
+        tools:text="The Old Man and the Gun"/>
+
+    <TextView
+        android:id="@+id/releaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4dp"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:background="@drawable/background_date_movie"
+        android:padding="3dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/bkgGradient"
+        app:layout_constraintTop_toTopOf="@+id/bkgGradient"
+        tools:text="28-09-2018" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:textSize="10sp"
+        android:paddingEnd="@dimen/margin_8dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="@+id/releaseDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/releaseDate"
+        tools:text="The Old Man and the Gun"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
