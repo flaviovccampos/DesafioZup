@@ -1,5 +1,7 @@
 package br.com.codigozeroum.desafiozup.modules.details.model
 
+import android.graphics.Bitmap
+
 data class SearchDetailsResponse(
     val Actors: String,
     val Country: String,

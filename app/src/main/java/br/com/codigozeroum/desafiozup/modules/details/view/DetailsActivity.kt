@@ -1,6 +1,7 @@
 package br.com.codigozeroum.desafiozup.modules.details.view
 
 import android.content.DialogInterface
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -60,7 +61,7 @@ class DetailsActivity : BaseActivity() {
                     DialogInterface.OnClickListener { dialog, id ->
                         val editText: EditText = favoriteLayout.findViewById(R.id.favorite_title)
                         newFavoriteTitle = editText.text.toString()
-                        viewModel.saveSearchDetailRealm(viewModel.itemDetail, newFavoriteTitle)
+                        viewModel.saveSearchDetailRealm(viewModel.itemDetail, newFavoriteTitle, (poster.drawable as BitmapDrawable).bitmap)
                     }
                     , DialogInterface.OnClickListener { dialog, id ->
                         dialog.dismiss()

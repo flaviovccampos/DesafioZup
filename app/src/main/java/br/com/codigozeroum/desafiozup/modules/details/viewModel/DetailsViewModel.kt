@@ -1,5 +1,6 @@
 package br.com.codigozeroum.desafiozup.modules.details.viewModel
 
+import android.graphics.Bitmap
 import br.com.codigozeroum.desafiozup.database_realm.model.SearchDetailRealm
 import br.com.codigozeroum.desafiozup.factory.BaseViewModel
 import br.com.codigozeroum.desafiozup.factory.ViewModelState
@@ -45,9 +46,9 @@ class DetailsViewModel : BaseViewModel() {
         return localRepository.getTitleFavorite(imdbID)
     }
 
-    fun saveSearchDetailRealm(searchDetailsResponse: SearchDetailsResponse, titleFavorite: String) {
+    fun saveSearchDetailRealm(searchDetailsResponse: SearchDetailsResponse, titleFavorite: String, posterBitmap: Bitmap) {
 
-        val disposable = localRepository.saveSearchDetailRealm(searchDetailsResponse, titleFavorite)
+        val disposable = localRepository.saveSearchDetailRealm(searchDetailsResponse, titleFavorite, posterBitmap)
             .subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(

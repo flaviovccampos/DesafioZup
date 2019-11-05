@@ -33,6 +33,7 @@ open class SearchDetailRealm() : RealmObject() {
     var Actors: String = String()
     var Plot: String = String()
     var Poster: String = String()
+    var PosterBase64: String = String()
     var Rated: String = String()
     var Released: String = String()
     var Response: String = String()

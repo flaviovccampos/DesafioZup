@@ -29,4 +29,19 @@ object ImageLoader{
         }
     }
 
+    fun loadImageBaytesWith(context: Context, bytesArray: ByteArray, into: ImageView?){
+        into?.let {
+            Glide.with(context)
+                .load(bytesArray)
+                .asBitmap()
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
+                .into(object : SimpleTarget<Bitmap>() {
+                    override fun onResourceReady(resource: Bitmap?, glideAnimation: GlideAnimation<in Bitmap>?) {
+                        it.setImageBitmap(resource)
+                    }
+                })
+        }
+    }
+
 }
